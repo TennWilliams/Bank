@@ -2,7 +2,7 @@
     
     height: 80px;
 }
-
+/*
 .create{
     color: blanchedalmond;
     background-color: palevioletred;
@@ -15,6 +15,7 @@
     font-weight: bold;
     text-align: center;    
     margin-left: 30px;
+    
 }
 
 .create:active{
@@ -30,7 +31,7 @@
     transition: 0.9s;
     color: blanchedalmond;
   }
-
+*/
 .nav-link {
     color: blanchedalmond;
     background-color: purple;
@@ -85,7 +86,9 @@
     transition: 0.9s;
     color: blanchedalmond;   
 }
-
+#log{
+    margin-left: 30px;
+}
 
 .card-header{
     font-weight: bold;

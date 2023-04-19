@@ -1,8 +1,15 @@
 function AllData(){
   const ctx = React.useContext(UserContext);
+  
   return (
-    <h1>All Data<br/>
-      {JSON.stringify(ctx)}
-    </h1>
+
+    
+     <Card
+      bgcolor="primary"
+      txtcolor="light"
+      header="All Transactions"
+      title={`Transaction: ${ctx.name}`}
+      body={JSON.stringify(ctx)}
+    />
   );
 }
