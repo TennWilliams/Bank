@@ -15,7 +15,7 @@ function CreateAccount(){
        return false;
       }
       if (label==="password" && password.length < 8) {
-        setStatus(label + 'must be 8 or characters long');
+        setStatus(label + ' must be 8 or more characters long');
         setTimeout(() => setStatus(''),3000);
         return false;
       }
@@ -37,7 +37,7 @@ function CreateAccount(){
       
     if (!validate(password, 'password')) 
     return;
-    
+
     else
     ctx.users.push({name,email,password,balance:100});
     setShow(false);

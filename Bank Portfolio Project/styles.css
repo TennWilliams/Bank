@@ -62,8 +62,8 @@
 
 .navbar-brand{
     color: blanchedalmond;
-    background-color: purple;
-    border: 4px solid palevioletred;
+    background-color: palevioletred;
+    border: 4px solid purple;
     border-radius: 20px;
     width: 180px;
     height: 40px;
@@ -101,4 +101,48 @@
 .card-body{
     text-align: center;
 }
-
+.flip-card {
+    background-color: transparent;
+    width: 550px;
+    height: 300px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    margin-left: 110px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card-front {
+    background-color: palevioletred;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    color: purple;
+  }
+  
+  .flip-card-back {
+    background-color: palevioletred;
+    color: blanchedalmond;
+    transform: rotateY(180deg);
+      
+  }
