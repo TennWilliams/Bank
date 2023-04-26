@@ -16,16 +16,10 @@ function NavBar(){
               <a className="nav-link active" title="Create an Account" href="#/CreateAccount/">Create Account</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" title="Login To Your Account" href="#/login/">Login</a>
-            </li>
-            <li className="nav-item">
               <a className="nav-link" title="Make a Deposit" href="#/deposit/">Deposit</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" title="Make a Withdrawal" href="#/withdraw/">Withdraw</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link"  title="See Your Balance" href="#/balance/">Balance</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" title="See All Transactions" href="#/alldata/">AllData</a>

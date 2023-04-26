@@ -11,21 +11,16 @@ function CreateAccount(){
   function validate(field, label){
      if (!field) {
        setStatus('Enter your ' + label);
-       setTimeout(() => setStatus(''),3000);
+       setTimeout(() => setStatus(''),5000);
        return false;
       }
       if (label==="password" && password.length < 8) {
         setStatus(label + ' must be 8 or more characters long');
-        setTimeout(() => setStatus(''),3000);
+        setTimeout(() => setStatus(''),5000);
         return false;
       }
-
-
-
       return true;
  }
-
-
 
   function handleCreate(){
     console.log(name,email,password);
@@ -70,8 +65,9 @@ function CreateAccount(){
               <>
               <h5>You Have Successfully Created An Account</h5>
               <h5>What Would You like To Do Next?</h5><br></br>
-              <button type="submit" className="btn btn-outline-success" title="Another Account Needed" onClick={clearForm}>Add Another Account</button>
-              <a role="button" id="log" className="btn btn-outline-primary" title="Login To Your Account" href="#/login/">Login</a>
+              <button type="submit" className="btn btn-outline-info" id="success" title="Another Account Needed" onClick={clearForm}>Add Another Account</button>
+              <a role="button" id="log" className="btn btn-outline-success" title="Make A Deposit" href="#/deposit/">Deposit</a>
+              <a role="button" id="log" className="btn btn-outline-danger" title="Make A Withdraw" href="#/withdraw/">Withdraw</a>
               </>
             )}
     />

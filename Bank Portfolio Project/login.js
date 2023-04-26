@@ -1,8 +1,10 @@
 function Login(){
   const ctx = React.useContext(UserContext);
+  
   return (
-    <h1>Login<br/>
+    <h1>Withdraw<br/>
       {JSON.stringify(ctx)}
     </h1>
-  )  
+  )
 }
+
