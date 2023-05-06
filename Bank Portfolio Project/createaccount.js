@@ -11,12 +11,12 @@ function CreateAccount(){
   function validate(field, label){
      if (!field) {
        setStatus('Enter your ' + label);
-       setTimeout(() => setStatus(''),5000);
+       setTimeout(() => setStatus(''),3000);
        return false;
       }
       if (label==="password" && password.length < 8) {
         setStatus(label + ' must be 8 or more characters long');
-        setTimeout(() => setStatus(''),5000);
+        setTimeout(() => setStatus(''),3000);
         return false;
       }
       return true;
@@ -25,13 +25,13 @@ function CreateAccount(){
   function handleCreate(){
     console.log(name,email,password);
     if (!validate(name,     'name'))     
-      return;
+      return false;
       
     if (!validate(email,    'email'))    
-      return;
+      return false;
       
     if (!validate(password, 'password')) 
-    return;
+    return false;
 
     else
     ctx.users.push({name,email,password,balance:100});
@@ -48,23 +48,30 @@ function CreateAccount(){
   return (
     <Card
       bgcolor="light"
-      txtcolor="info"
+      txtcolor="danger"
       header="Create Account"
       status={status}
       body={show ? (  
               <>
-              Name<br/>
-              <input type="input" className="form-control" id="name" placeholder="Enter name" value={name} onChange={e => setName(e.currentTarget.value)} /><br/>
-              Email address<br/>
-              <input type="input" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)}/><br/>
-              Password<br/>
-              <input type="password" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)}/><br/>
-              <button type="submit" disabled={isValid} className="create" title="Create Account" onClick={handleCreate}>Create Account</button>
+              <p style={{color: "royalblue", marginBottom:"0px"}}>Name</p>
+              <input type="input" className="form-control" id="name" placeholder="Enter Name" title="Enter Your Name" value={name} onChange={e => setName(e.currentTarget.value)} /><br/>
+
+              <p style={{color: "royalblue", marginBottom:"0px"}}>Email Address</p>
+              <input type="input" className="form-control" id="email" placeholder="Enter Email" title="Enter Your Email" value={email} onChange={e => setEmail(e.currentTarget.value)}/><br/>
+              
+              <p style={{color: "royalblue", marginBottom:"0px"}}>Password</p>
+              <input type="password" className="form-control" id="password" placeholder="Enter Password" title="Enter Your Password" value={password} onChange={e => setPassword(e.currentTarget.value)}/>
+              
+              <p style={{color: "royalblue",    
+                  textAlign:"left", fontSize:"13px"}}>(Must be 8 or more characters long)</p>
+              <br/>
+              <button type="submit"  className="create" title="Create Account" onClick={handleCreate}>Create Account</button>
+              
               </>
             ):(
               <>
-              <h5>You Have Successfully Created An Account</h5>
-              <h5>What Would You like To Do Next?</h5><br></br>
+              <h5 style={{color: "royalblue"}}>You Have Successfully Created An Account</h5>
+              <h5 style={{color: "royalblue"}}>What Would You like To Do Next?</h5><br></br>
               <button type="submit" className="btn btn-outline-info" id="success" title="Another Account Needed" onClick={clearForm}>Add Another Account</button>
               <a role="button" id="log" className="btn btn-outline-success" title="Make A Deposit" href="#/deposit/">Deposit</a>
               <a role="button" id="log" className="btn btn-outline-danger" title="Make A Withdraw" href="#/withdraw/">Withdraw</a>

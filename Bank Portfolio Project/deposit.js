@@ -2,32 +2,30 @@ function Deposit(){
   const [show, setShow]         = React.useState(true);
     const [status, setStatus]     = React.useState('');
     const [deposit, setDeposit]         = React.useState('');
-    const [balance, setBalance]         = React.useState(0);
+    const [balance, setBalance]         = React.useState(100);
     
     const ctx = React.useContext(UserContext);  
   
-    
     const handleDeposit = (event) => {
       console.log(deposit);
-      
 
       if (isNaN(deposit)){
         setStatus('Amount must be a number');
-        setTimeout(() => setStatus(''),5000);
+        setTimeout(() => setStatus(''),3000);
         clearForm();
         return;
       }
       if (deposit <= 0) {
         setStatus('Amount must be greater than 0');
-        setTimeout(() => setStatus(''),5000);
+        setTimeout(() => setStatus(''),3000);
         clearForm();
         return;
       }
       
       else{
       const newBalance = +balance + +deposit;
-      setBalance(newBalance)
-      ctx.users.push(`Deposited ${deposit}`);
+      setBalance(newBalance);
+      ctx.users.push(`Deposited: $${deposit}`);
       setShow(false);
     }    
     event.preventDefault();

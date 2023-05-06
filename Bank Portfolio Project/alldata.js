@@ -1,6 +1,7 @@
 function AllData(){
   const ctx = React.useContext(UserContext);
-  
+
+ 
   return (
      <Card
       bgcolor="secondary"
@@ -11,9 +12,8 @@ function AllData(){
           <br></br><br></br>
           <p>Click Or Hover To See All Transactions</p>
         </div>
-        <div className="flip-card-back">
+        <div className="flip-card-back" >
         {JSON.stringify(ctx)}
-        
         </div>
       </div>
     </div>

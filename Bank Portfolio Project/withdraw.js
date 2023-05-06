@@ -12,26 +12,26 @@ function Withdraw(){
 
       if (isNaN(withdraw)){
         setStatus('Amount must be a number');
-        setTimeout(() => setStatus(''),5000);
+        setTimeout(() => setStatus(''),3000);
         clearForm();
         return;
       }
       if (withdraw <= 0) {
         setStatus('Amount must be greater than 0');
-        setTimeout(() => setStatus(''),5000);
+        setTimeout(() => setStatus(''),3000);
         clearForm();
         return;
       }
       if (balance < withdraw){
         setStatus(`You do not have enough money to withdraw $${withdraw}. Your Account Balance is $${balance} Try a different amount.`);
-        setTimeout(() => setStatus(''),5000);
+        setTimeout(() => setStatus(''),4000);
         clearForm();
         return;
       }
       else{
       const newBalance = balance - withdraw;
       setBalance(newBalance)
-      ctx.users.push(`Withdrew ${withdraw}`);
+      ctx.users.push(`Withdrew: $${withdraw}`);
       setShow(false);
     }    
     event.preventDefault();
@@ -45,10 +45,9 @@ function Withdraw(){
   
     return (
       <Card
-        bgcolor="secondary"
-        
+        bgcolor="danger"
         header="Make A Withdrawal"
-        status={status}
+        status={status} 
         body={show ? (  
                 <>
                 
@@ -70,14 +69,14 @@ function Withdraw(){
                 <input type="input" width="200" className="form-control" id="withdraw" placeholder="Enter Amount" title="How Much?" value={withdraw} onChange={e => setWithdraw(e.currentTarget.value)} /><br/>
                 
                 
-                <button type="submit" className="btn btn-danger" title="Make Withdrawal" onClick={handleWithdraw}>Withdraw</button>
+                <button type="submit" className="btn btn-outline-light" title="Make Withdrawal" onClick={handleWithdraw}>Withdraw</button>
                 </>
               ):(
                 <>
                 <h5>You Successfully Withdrew ${withdraw}</h5>
                 <h5>Your Account Balance is ${balance}</h5>
                 <h5>What Would You like To Do Next?</h5><br></br>
-                <button type="submit" className="btn btn-danger"  title="You Sure?" onClick={clearForm}>Make Another Withdraw</button>
+                <button type="submit" className="btn btn-outline-light"  title="You Sure?" onClick={clearForm}>Make Another Withdraw</button>
                 <a role="button" id="log" className="btn btn-success" title="Make a Deposit" href="#/deposit/">Make A Deposit</a>
                 </>
               )}
