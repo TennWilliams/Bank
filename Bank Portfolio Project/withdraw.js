@@ -31,7 +31,8 @@ function Withdraw(){
       else{
       const newBalance = balance - withdraw;
       setBalance(newBalance)
-      ctx.users.push(`Withdrew: $${withdraw}`);
+      //ctx.users.push(`Withdrew: $${withdraw}`);
+      ctx.users.push({withdraw});
       setShow(false);
     }    
     event.preventDefault();

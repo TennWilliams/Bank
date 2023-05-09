@@ -13,7 +13,7 @@ function NavBar(){
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" title="Create an Account" href="#/CreateAccount/">Create Account</a>
+              <a className="nav-link" title="Create an Account" href="#/CreateAccount/">Create Account</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" title="Make a Deposit" href="#/deposit/">Deposit</a>

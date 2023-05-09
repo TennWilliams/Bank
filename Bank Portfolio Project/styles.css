@@ -51,6 +51,7 @@
 .nav-link:active{
     top: 2px;
     transition: ease-in;
+    
   }
   
 .nav-link:hover{

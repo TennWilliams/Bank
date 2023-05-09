@@ -1,6 +1,6 @@
 function AllData(){
   const ctx = React.useContext(UserContext);
-
+  const dataArray = ctx.users;
  
   return (
      <Card
@@ -11,9 +11,22 @@ function AllData(){
         <div className="flip-card-front">
           <br></br><br></br>
           <p>Click Or Hover To See All Transactions</p>
+          
         </div>
         <div className="flip-card-back" >
-        {JSON.stringify(ctx)}
+        <ul>
+            {dataArray.map((item, key) => {
+              return (
+                <div key={key}>
+                  <ul>
+                   Name: {item.name}, Email: {item.email}, Deposited: ${item.deposit}, Withdrew: ${item.withdraw}
+                  
+                  </ul>
+                </div>
+              );
+            })}
+          </ul>
+        
         </div>
       </div>
     </div>

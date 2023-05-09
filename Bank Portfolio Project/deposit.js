@@ -1,10 +1,10 @@
 function Deposit(){
-  const [show, setShow]         = React.useState(true);
+    const ctx = React.useContext(UserContext);
+    const [show, setShow]         = React.useState(true);
     const [status, setStatus]     = React.useState('');
     const [deposit, setDeposit]         = React.useState('');
     const [balance, setBalance]         = React.useState(100);
     
-    const ctx = React.useContext(UserContext);  
   
     const handleDeposit = (event) => {
       console.log(deposit);
@@ -25,7 +25,8 @@ function Deposit(){
       else{
       const newBalance = +balance + +deposit;
       setBalance(newBalance);
-      ctx.users.push(`Deposited: $${deposit}`);
+     //ctx.users.push(`Deposited: $${deposit}`);
+      ctx.users.push({deposit});
       setShow(false);
     }    
     event.preventDefault();
