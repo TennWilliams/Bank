@@ -12,7 +12,7 @@ function Card(props){
     }
   
     return (
-      <div className={classes()} style={{maxWidth: "50rem", marginLeft:"150px"}}>
+      <div className={classes()} style={{maxWidth: "50rem"}}>
         
         <div className="card-header" style={{backgroundColor:"palevioletred"}}>{props.header}</div>
         <div className="card-body">

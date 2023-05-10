@@ -39,12 +39,13 @@
     background-color: purple;
     border: 4px solid palevioletred;
     border-radius: 10px;
-    width: 180px;
+    margin-left: 2vw;
+    max-width: fit-content;
+    
     height: 40px;
     font-size: 20px;
     position: relative;
     text-align: center;   
-    margin-left: 90px;
     transition: 0.7s ease-in;
 }
 
@@ -69,12 +70,12 @@
     background-color: palevioletred;
     border: 4px solid purple;
     border-radius: 20px;
-    width: 180px;
+    margin-left: 14vw;
+    width: 140px;
     height: 40px;
     font-size: 20px;
     position: relative;
     text-align: center;
-    margin-left: 90px;
     transition: 0.7s;
 }
 
