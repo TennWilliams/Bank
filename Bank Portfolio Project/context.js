@@ -12,9 +12,9 @@ function Card(props){
     }
   
     return (
-      <div className={classes()} style={{maxWidth: "50rem"}}>
+      <div className={classes()} style={{maxWidth: "50rem", border:"3px solid purple", borderRadius:"20px"}}>
         
-        <div className="card-header" style={{backgroundColor:"palevioletred"}}>{props.header}</div>
+        <div className="card-header" style={{backgroundColor:"palevioletred", borderTopLeftRadius:"17px", borderTopRightRadius:"17px"}}>{props.header}</div>
         <div className="card-body">
           {props.title && (<h5 className="card-title">{props.title}</h5>)}
           {props.text && (<p className="card-text">{props.text}</p>)}

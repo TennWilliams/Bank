@@ -4,7 +4,7 @@ function AllData(){
  
   return (
      <Card
-      bgcolor="secondary"
+      bgcolor="light"
       header="All Transactions"
       body={<div className="flip-card">
       <div className="flip-card-inner">

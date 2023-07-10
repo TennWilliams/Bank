@@ -47,7 +47,7 @@ function Deposit(){
                 <>
                 
               <div className="flip-card" style={{width: "250px", height:"60px", 
-                marginLeft:"250px"}}>
+                marginLeft:"17vw"}}>
               <div className="flip-card-inner">
               <div className="flip-card-front" style={{color: "purple",    
                   fontSize:"20px", backgroundColor:"palevioletred"}}>
@@ -62,7 +62,7 @@ function Deposit(){
                 <h4 style={{textAlign:"left"}}>How Much Would You Like To Deposit?</h4><br></br>
                 <h5 style={{textAlign:"left"}}>Amount</h5>
                 <input type="input" width="200" className="form-control" id="withdraw" placeholder="Enter Amount" title="How Much?" value={deposit} onChange={e => setDeposit(e.currentTarget.value)} /><br/>
-                <button type="submit" className="create" title="Make Deposit" onClick={handleDeposit}>Deposit</button>
+                <button type="submit" className="create" title="Make Deposit" onClick={handleDeposit}>Make Deposit</button>
                 </>
               ):(
                 <>

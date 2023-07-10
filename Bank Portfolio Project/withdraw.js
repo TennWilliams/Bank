@@ -46,21 +46,21 @@ function Withdraw(){
   
     return (
       <Card
-        bgcolor="danger"
+        bgcolor="secondary"
         header="Make A Withdrawal"
         status={status} 
         body={show ? (  
                 <>
                 
               <div className="flip-card" style={{width: "250px", height:"60px", 
-                marginLeft:"250px"}}>
+                marginLeft:"16vw"}}>
               <div className="flip-card-inner">
-              <div className="flip-card-front" style={{color: "red",    
-                  fontSize:"20px", backgroundColor:"pink"}}>
+              <div className="flip-card-front" style={{color: "purple",    
+                  fontSize:"20px", backgroundColor:"palevioletred"}}>
                   <p>Click/Hover For Balance</p>
               </div>
-              <div className="flip-card-back" style={{color: "red",   
-                    backgroundColor:"pink", fontSize:"20px"}}>
+              <div className="flip-card-back" style={{color: "purple",   
+                    backgroundColor:"palevioletred", fontSize:"20px"}}>
                     Your Account Balance is <br></br> ${balance}  
               </div>
               </div>
@@ -70,7 +70,7 @@ function Withdraw(){
                 <input type="input" width="200" className="form-control" id="withdraw" placeholder="Enter Amount" title="How Much?" value={withdraw} onChange={e => setWithdraw(e.currentTarget.value)} /><br/>
                 
                 
-                <button type="submit" className="btn btn-outline-light" title="Make Withdrawal" onClick={handleWithdraw}>Withdraw</button>
+                <button type="submit" className="create" title="Make Withdrawal" onClick={handleWithdraw}>Withdraw</button>
                 </>
               ):(
                 <>
