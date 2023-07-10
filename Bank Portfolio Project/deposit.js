@@ -47,7 +47,7 @@ function Deposit(){
                 <>
                 
               <div className="flip-card" style={{width: "250px", height:"60px", 
-                marginLeft:"17vw"}}>
+                marginLeft:"15vw"}}>
               <div className="flip-card-inner">
               <div className="flip-card-front" style={{color: "purple",    
                   fontSize:"20px", backgroundColor:"palevioletred"}}>
@@ -69,8 +69,8 @@ function Deposit(){
                 <h5>You Successfully Deposited ${deposit}</h5>
                 <h5>Your Account Balance is ${balance}</h5>
                 <h5>What Would You like To Do Next?</h5><br></br>
-                <button type="submit" id="log" className="btn btn-success" title="Another Deposit" onClick={clearForm}>Another Deposit</button>
-                <a role="button" id="log" className="btn btn-danger" title="You Sure?" href="#/withdraw/">Withdraw</a>
+                <button type="submit" id="log" className="btn btn-primary" title="Another Deposit" onClick={clearForm}>Another Deposit</button>
+                <a role="button" id="log" className="btn btn-secondary" title="You Sure?" href="#/withdraw/">Withdraw</a>
                 </>
               )}
       />

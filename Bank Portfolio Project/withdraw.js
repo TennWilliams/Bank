@@ -53,7 +53,7 @@ function Withdraw(){
                 <>
                 
               <div className="flip-card" style={{width: "250px", height:"60px", 
-                marginLeft:"16vw"}}>
+                marginLeft:"15vw"}}>
               <div className="flip-card-inner">
               <div className="flip-card-front" style={{color: "purple",    
                   fontSize:"20px", backgroundColor:"palevioletred"}}>
@@ -77,8 +77,8 @@ function Withdraw(){
                 <h5>You Successfully Withdrew ${withdraw}</h5>
                 <h5>Your Account Balance is ${balance}</h5>
                 <h5>What Would You like To Do Next?</h5><br></br>
-                <button type="submit" className="btn btn-outline-light"  title="You Sure?" onClick={clearForm}>Make Another Withdraw</button>
-                <a role="button" id="log" className="btn btn-success" title="Make a Deposit" href="#/deposit/">Make A Deposit</a>
+                <button type="submit" id="log" className="btn btn-outline-light"  title="You Sure?" onClick={clearForm}>Make Another Withdraw</button>
+                <a role="button" id="log" className="btn btn-primary" title="Make a Deposit" href="#/deposit/">Make A Deposit</a>
                 </>
               )}
       />
