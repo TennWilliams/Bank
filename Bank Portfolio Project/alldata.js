@@ -10,15 +10,14 @@ function AllData(){
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <br></br><br></br>
-          <p>Click Or Hover To See All Accounts</p>
+          <p>Click Or Hover To See All Transactions</p>
           
         </div>
         <div className="flip-card-back" >
-        <h5>List Of All Accounts</h5>
+        <h5>List Of All Transactions</h5>
         <table class="table table-bordered">
         <thead>
           <tr>
-          <th scope="col">Account</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Password</th>
@@ -33,13 +32,12 @@ function AllData(){
               return (
                 
                 <tr key={key}>
-                  <th scope ="row">{key+1}</th>
-                  <td>{item.name}</td>
+                  <th scope ="row">{item.name}</th>
                   <td>{item.email}</td>
                   <td>{item.password}</td>
-                  <td>${item.amount}</td>
+                  <td>${item.deposit}</td>
                   <td>${item.withdraw}</td>
-                  <td>${item.balance}</td>
+                  <td>{item.balance}</td>
                 </tr>
               );
             })}
