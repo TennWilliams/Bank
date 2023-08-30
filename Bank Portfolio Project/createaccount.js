@@ -71,10 +71,13 @@ function CreateAccount(){
             ):(
               <>
               <h5 style={{color: "royalblue"}}>You Have Successfully Created An Account</h5>
-              <h5 style={{color: "royalblue"}}>What Would You like To Do Next?</h5><br></br>
-              <button type="submit" className="btn btn-outline-success" id="log" title="Another Account Needed" onClick={clearForm}>Add Another Account</button>
-              <a role="button" id="log" className="btn btn-outline-primary" title="Make A Deposit" href="#/deposit/">Deposit</a>
-              <a role="button" id="log" className="btn btn-outline-secondary" title="Make A Withdraw" href="#/withdraw/">Withdraw</a>
+              <h5 style={{color: "royalblue"}}>Here Are Your Credentials:</h5>
+              <h5 style={{color: "palevioletred"}}>Name: {name}, Email: {email}, Password: {password}</h5>
+              <br></br>
+              <h5 style={{color: "royalblue"}}>To view account information or make a transaction please login</h5><br></br>
+              <a role="button" id="log" className="btn btn-primary" 
+              title="Login To Account" href="#/login/">Login</a>
+              
               </>
             )}
     />

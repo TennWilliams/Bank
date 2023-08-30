@@ -67,7 +67,7 @@
     transition: 0.7s;
     margin-bottom: 1vw;
     font-weight: bold;
-    margin-left: 13vw;
+    margin-left: 18vw;
     max-width: fit-content;
 }
 
@@ -83,8 +83,49 @@
     border: 3px solid palevioletred;
     transition: 0.7s ease-in;
     color: blanchedalmond;   
-    
 }
+
+#logoutBtn{
+   visibility: hidden;
+   margin-right: 3vw;
+   background-color: palevioletred;
+    border: 3px solid purple;
+    border-radius: 40px;
+    position: relative;
+    text-align: center;
+    transition: 0.7s;
+ }
+
+ #logoutBtn:active{
+  top: 1px;
+  transition: ease-in;
+}
+
+#logoutBtn:hover{
+  bottom: 1px;
+  font-weight: bolder;
+  background-color: purple;
+  border: 3px solid palevioletred;
+  transition: 0.7s ease-in;
+  color: blanchedalmond;   
+}
+ 
+ #navBtn{
+   visibility: hidden;
+ }
+ 
+ #navBtn2{
+   visibility: hidden;
+ }
+ 
+ #navBtn3{
+   visibility: hidden;
+ }
+ 
+ #navBtn4{
+   visibility: hidden;
+ }
+
 #log{
     margin-left: 1vw;
     margin-bottom: 1vw;
@@ -104,7 +145,7 @@
 .flip-card {
     background-color: transparent;
    /* width: 650px;*/
-    height: 300px;
+    height: 500px;
     perspective: 1000px;
   }
   
@@ -141,4 +182,6 @@
     background-color: palevioletred;
     color: purple;
     transform: rotateY(180deg);
+    min-width: fit-content;
+    min-height: fit-content;
   }

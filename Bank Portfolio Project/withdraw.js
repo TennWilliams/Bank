@@ -32,6 +32,7 @@ function Withdraw(){
       const newBalance = balance - withdraw;
       setBalance(newBalance)
       //ctx.users.push(`Withdrew: $${withdraw}`);
+      //window.localStorage.setItem("balance", JSON.stringify(newBalance));
       ctx.users.push({withdraw});
       setShow(false);
     }    
